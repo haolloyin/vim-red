@@ -80,7 +80,8 @@ syn match redSet "\K\k*:"
 syn match redString "\a\+:\/\/[^[:space:]]*"
 syn match redString "%[^[:space:]]*"
 syn region redString oneline start=+%\="+ skip=+^"+ end=+"+ contains=redSpecialCharacter
-syn region redString start=+[^#]{+ end=+}+ skip=+{[^}]*}+ contains=redSpecialCharacter
+"syn region redString start=+[^#]{+ end=+}+ skip=+{[^}]*}+ contains=redSpecialCharacter
+syn region redString start=+[^#|^"]{+ end=+}+ skip=+{[^}]*}+ contains=redSpecialCharacter
 syn match redSpecialCharacter contained "\^[^[:space:][]"
 syn match redSpecialCharacter contained "%\d\+"
 
