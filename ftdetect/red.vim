@@ -1,4 +1,4 @@
-function s:DetectRed()
+function! s:DetectRed()
   if did_filetype()
     return
   end
